@@ -2,7 +2,10 @@
 api.mapkey('<ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
-
+api.mapkey("f", '#1Open a link, press SHIFT to flip overlapped hints, hold SPACE to hide hints', function() {
+        Hints.create("", Hints.dispatchMouseClick);
+        Hints.create(Normal.refreshScrollableElements(), Hints.dispatchMouseClick);
+}, {repeatIgnore: true});
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
 
